@@ -6,7 +6,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="kos.triple.project.persistence.hee.MemberDAO">
 	
-	<!-- 회원 가입 처리 -->
 	<insert id="inputMemberPro" parameterType="kos.triple.project.vo.MemberVO">
 		
 		INSERT INTO member(mem_id,name,password,email1,email2,sex,phone1,phone2,phone3,birth,grade)
@@ -18,5 +17,4 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		)
 		
 	</insert>
-	
 </mapper>

@@ -33,7 +33,8 @@ public class MemberDAOImpl implements MemberDAO{
 		int cnt = 0;
 
 		MemberDAO dao = sqlSession.getMapper(MemberDAO.class);
-		cnt = dao.idCheck(mem_id);
+		
+		cnt = dao.idCheck(mem_id);	
 
 		return cnt;
 	}
@@ -47,6 +48,8 @@ public class MemberDAOImpl implements MemberDAO{
 		MemberDAO dao = sqlSession.getMapper(MemberDAO.class);
 
 		int idChkCnt = dao.idCheck((String) map.get("mem_id"));
+		
+		System.out.println("4 ¾ÆÀÌµð : " + map.get("mem_id"));
 
 		if (idChkCnt == 1) {
 
@@ -55,10 +58,14 @@ public class MemberDAOImpl implements MemberDAO{
 			if (pwdChkCnt == 1) {
 
 				cnt = 1;
+				
 			} else {
 
-				cnt = 1;
+				cnt = 0;
 			}
+		}else {
+			
+			cnt = -1;
 		}
 
 		return cnt;

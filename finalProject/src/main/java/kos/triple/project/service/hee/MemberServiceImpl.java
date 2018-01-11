@@ -82,12 +82,12 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void confirmId(HttpServletRequest req, Model model) {
 		
-		String mem_id = req.getParameter("mem_id");
+		String userId = req.getParameter("userId");
 		
-		int cnt = dao.idCheck(mem_id);
+		int cnt = dao.idCheck(userId);
 		
 		model.addAttribute("cnt", cnt);
-		model.addAttribute("mem_id", mem_id);
+		model.addAttribute("userId", userId);
 		
 	}
 
@@ -95,12 +95,16 @@ public class MemberServiceImpl implements MemberService{
 	@Override
 	public void loginPro(HttpServletRequest req, Model model) {
 		
-		String mem_id = req.getParameter("mem_id");
-		String password = req.getParameter("password");
+		String mem_id = req.getParameter("userId");
+		String userPassword = req.getParameter("userPassword");
+		
+		System.out.println("1 아이디 : " + mem_id);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("mem_id", mem_id);
-		map.put("password", password);
+		map.put("userPassword", userPassword);
+		
+		System.out.println("2 아이디 : " + map.get("mem_id"));
 		
 		int cnt = dao.loginPro(map);
 		

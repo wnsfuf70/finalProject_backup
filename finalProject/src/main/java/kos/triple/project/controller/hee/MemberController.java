@@ -15,12 +15,13 @@ public class MemberController {
 	@Autowired
 	MemberService service;
 	
-	@RequestMapping(value="register")
+	//로그인처리
+	@RequestMapping(value="login")
 	public String register(HttpServletRequest req , Model model) {
 		
-		service.inputMemberPro(req,model);
+		service.loginPro(req, model);
 		
-		return "main";
+		return "main/main";
 	}
 	
 	
