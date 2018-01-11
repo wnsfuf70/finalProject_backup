@@ -16,13 +16,23 @@ public class MemberController {
 	MemberService service;
 	
 	//로그인처리
+		@RequestMapping(value="register")
+		public String register(HttpServletRequest req , Model model) {
+			
+			service.loginPro(req, model);
+			
+			return "main/main";
+		}
+	
+	//로그인처리
 	@RequestMapping(value="login")
-	public String register(HttpServletRequest req , Model model) {
+	public String login(HttpServletRequest req , Model model) {
 		
 		service.loginPro(req, model);
 		
 		return "main/main";
 	}
+	
 	
 	
 }
