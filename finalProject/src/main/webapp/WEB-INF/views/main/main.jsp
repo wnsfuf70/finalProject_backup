@@ -129,7 +129,7 @@
 					<c:if test="${sessionScope.mem_id != null}">
 						<li class="dropdown">
 						<a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">${sessionScope.mem_id }님</a>
+							data-toggle="dropdown" href="#">${sessionScope.mem_id}님</a>
 							<ul class="dropdown-menu">
 								<li><a href="xxxStart">계획하기</a></li>
 								<li><a href="xxxStart">여행후기</a></li>
