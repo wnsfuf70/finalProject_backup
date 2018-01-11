@@ -20,7 +20,7 @@ public class MemberController {
 		
 		service.inputMemberPro(req,model);
 		
-		return "";
+		return "main";
 	}
 	
 	

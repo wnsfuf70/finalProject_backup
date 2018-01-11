@@ -11,7 +11,6 @@ import kos.triple.project.vo.MemberVO;
 @Repository
 public class MemberDAOImpl implements MemberDAO{
 	
-
 	@Autowired
 	SqlSession sqlSession;
 	
@@ -23,7 +22,7 @@ public class MemberDAOImpl implements MemberDAO{
 
 		MemberDAO dao = sqlSession.getMapper(MemberDAO.class);
 		cnt = dao.inputMemberPro(vo);
-
+		
 		return cnt;
 	}
 
