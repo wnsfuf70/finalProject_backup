@@ -18,11 +18,13 @@ public class MainController {
 		return "main/main";
 	}
 	
+	//관리자페이지
 	@RequestMapping(value="adminMain")
 	public String adminMain() {
 		return "main/adminMain";
 	}
 	
+	//로그아웃
 	@RequestMapping(value="logout")
 	public String logout(HttpServletRequest req) {
 		req.getSession().invalidate();

@@ -12,6 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			   #{email1},#{email2},#{sex},
 			   #{phone1},#{phone2},#{phone3},
 			   #{birth},#{grade}
+			   )
 	</insert>
 
 	
