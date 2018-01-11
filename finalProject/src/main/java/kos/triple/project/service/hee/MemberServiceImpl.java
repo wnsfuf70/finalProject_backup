@@ -27,25 +27,55 @@ public class MemberServiceImpl implements MemberService{
 		vo.setMem_id(req.getParameter("mem_id"));
 		vo.setName(req.getParameter("name"));
 		vo.setPassword(req.getParameter("password"));
-		vo.setEmail1(req.getParameter("email1"));
-		vo.setEmail1(req.getParameter("email2"));
-		vo.setSex(req.getParameter("sex"));
-		vo.setPhone1(req.getParameter("phone1"));
-		vo.setPhone2(req.getParameter("phone2"));
-		vo.setPhone3(req.getParameter("phone3"));
-		vo.setBirth(req.getParameter("birth"));
-		vo.setGrade(req.getParameter("grade"));
-		vo.setFaceImg(req.getParameter("faceImg"));
-		vo.setIntroduce(req.getParameter("introduce"));
 		
-		System.out.println(vo.getMem_id());
+		String email = req.getParameter("email");
+		String[] tmp = email.split("@");
+		
+		vo.setEmail1(tmp[0]);
+		vo.setEmail2(tmp[1]);
+		
+		vo.setSex(req.getParameter("sex"));
+		
+		String phone = req.getParameter("phone");
+		String p1=phone.substring(0,3);
+		String p2=phone.substring(3,7);
+		String p3=phone.substring(7);
+
+		vo.setPhone1(p1);
+		vo.setPhone2(p2);
+		vo.setPhone3(p3);
+		
+		vo.setBirth(req.getParameter("birth"));
+		vo.setGrade("일반");
+		vo.setFaceImg(""); //null
+		vo.setIntroduce(""); //null
+		
+		
+		System.out.println("id"+vo.getMem_id());
+		System.out.println(vo.getName());
+		
+		System.out.println("pwd"+vo.getPassword());
+
 		System.out.println(vo.getEmail1());
 		System.out.println(vo.getEmail2());
 		
+		System.out.println(vo.getSex());
 		
-		//int cnt = dao.inputMemberPro(vo);
 		
-		//model.addAttribute("cnt", cnt);
+		System.out.println("p1"+vo.getPhone1());
+		System.out.println(vo.getPhone2());		
+		System.out.println(vo.getPhone3());
+		
+
+	
+		System.out.println(vo.getBirth());
+	
+		System.out.println(vo.getGrade());
+	
+		
+		int cnt = dao.inputMemberPro(vo);
+		
+		model.addAttribute("cnt", cnt);
 	}
 
 	// 아이디 중복 확인

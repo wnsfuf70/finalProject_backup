@@ -252,25 +252,25 @@
 
 					<div class="form-group">
 						<label for="InputEmail">이메일 주소</label> 
-						<input type="email" class="form-control" id="InputEmail" placeholder="E-Mail(비밀번호 분실 시 필요합니다)" required="required">
+						<input type="email" class="form-control" id="InputEmail" placeholder="E-Mail(비밀번호 분실 시 필요합니다)" required="required" name="email">
 					</div>
 
 					<div class="form-group">
 						<label for="InputBirthday">생년월일</label> 
-						<input type="date" class="form-control" id="InputBirthday" placeholder="생년월일을 선택해 주세요" required="required">
+						<input type="date" class="form-control" id="InputBirthday" placeholder="생년월일을 선택해 주세요" required="required" name="birth">
 					</div>
 
 					<div class="form-group">
 						<label for="InputGender">성별</label>&nbsp;&nbsp;&nbsp; 
-						<label> <input name="gender" type="radio" value="Male" checked> 남자  </label>
+						<label> <input name="sex" type="radio" value="Male" checked> 남자  </label>
 						&nbsp;&nbsp;&nbsp; 
-						<label><input name="gender" type="radio" value="Female"> 여자</label>
+						<label><input name="sex" type="radio" value="Female"> 여자</label>
 					</div>
 
 					<div class="form-group">
 						<label for="username">휴대폰 인증</label>
 						<div class="input-group">
-							<input type="tel" class="form-control" id="username" placeholder="- 없이 입력해 주세요"> 
+							<input type="tel" class="form-control" id="username" placeholder="- 없이 입력해 주세요" name="phone"> 
 							<span class="input-group-btn">
 								<button class="btn btn-success">
 									인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i>

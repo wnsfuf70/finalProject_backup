@@ -2,7 +2,6 @@ package kos.triple.project.vo;
 
 public class MemberVO {
 
-	
 	private String mem_id;
 	private String name;
 	private String password;
@@ -17,6 +16,11 @@ public class MemberVO {
 	private String faceImg;
 	private String introduce;
 	
+	
+	public MemberVO() {
+	
+	}
+
 	
 	public MemberVO(String mem_id, String name, String password, String email1, String email2, String sex,
 			String phone1, String phone2, String phone3, String birth, String grade, String faceImg, String introduce) {
@@ -34,11 +38,6 @@ public class MemberVO {
 		this.grade = grade;
 		this.faceImg = faceImg;
 		this.introduce = introduce;
-	}
-
-
-	public MemberVO() {
-		
 	}
 
 
