@@ -29,8 +29,8 @@ public class MemberController {
 	public String login(HttpServletRequest req , Model model) {
 		
 		service.loginPro(req, model);
-		
-		return "main/main";
+
+		return "main/loginRedirect";
 	}
 	
 	

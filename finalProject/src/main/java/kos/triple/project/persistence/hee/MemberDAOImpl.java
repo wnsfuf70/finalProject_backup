@@ -67,7 +67,7 @@ public class MemberDAOImpl implements MemberDAO{
 			
 			cnt = -1;
 		}
-
+		
 		return cnt;
 	}
 

@@ -109,8 +109,15 @@ public class MemberServiceImpl implements MemberService{
 		int cnt = dao.loginPro(map);
 		
 		if(cnt == 1) {
+			if(mem_id.equals("host")) {
+				model.addAttribute("token","admin");
+			}
+			else {
+				model.addAttribute("token","user");
+			}
 			req.getSession().setAttribute("mem_id", mem_id);
 		}
+		
 		model.addAttribute("cnt", cnt);
 	}
 

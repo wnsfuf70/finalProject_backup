@@ -23,7 +23,7 @@
       <a class="navbar-brand" href="#">동행 관리자</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="main">Home</a></li>
+      <li class="active"><a href="logout">로그아웃</a></li>
       
       <li><a href="#" id="homeManage_click">홈페이지관리</a></li>
       
