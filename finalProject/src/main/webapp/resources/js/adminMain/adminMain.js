@@ -45,8 +45,8 @@ $(function() {
 						  "<ul class='nav nav-pills nav-stacked'>" +
 						  "<li class='active'><a href='#section1'>렌트카 예약 현황</a></li>" +
 						  "<li><a href='#section2'>예약취소</a></li>" +
-				 		  "<li><a href='#section3'>메뉴3</a></li>" +
-						  "<li><a href='#section3'>메뉴4</a></li>" +
+				 		  "<li><a href='#section3'>차량등록</a></li>" +
+						  "<li><a href='#section3'>차량삭제</a></li>" +
 						  "</ul><br>";
 
 			$(".reservation_manager_content").html(content);
