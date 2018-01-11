@@ -7,7 +7,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="kos.triple.project.persistence.hee.MemberDAO">
 	
 	<insert id="inputMemberPro" parameterType="kos.triple.project.vo.MemberVO">
-		
 		INSERT INTO member(mem_id,name,password,email1,email2,sex,phone1,phone2,phone3,birth,grade)
 		VALUES(
 			   #{mem_id},#{name},#{password},
@@ -15,6 +14,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			   #{phone1},#{phone2},#{phone3},
 			   #{birth},#{grade}
 		)
-		
 	</insert>
+	
+	
+	<!-- 아이디 중복 확인 체크 -->
+	<select id="idCheck" resultType="int">
+		SELECT COUNT(*) FROM member WHERE mem_id=#{mem_id}
+	</select>
+	
+	<!-- 로그인 처리 --> 
+	<select id="loginPro" parameterType="java.util.Map" resultType="int">
+		SELECT COUNT(*) FROM member WHERE mem_id=#{mem_id} AND password=#{userPassword}
+	</select>
+	
+
+	 
 </mapper>
