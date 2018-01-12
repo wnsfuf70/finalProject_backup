@@ -38,6 +38,7 @@ $(function() {
 			  			  "</ul><br>";
 
 			$(".reservation_manager_content").html(content);
+			$("iframe").attr("src","#section1");
 		})
 		
 		//렌트카관리클릭
@@ -55,6 +56,7 @@ $(function() {
 						  "</ul><br>";
 
 			$(".reservation_manager_content").html(content);
+			$("iframe").attr("src","rentReservationList");
 		})
 		
 		

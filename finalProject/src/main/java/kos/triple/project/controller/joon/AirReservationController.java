@@ -32,7 +32,6 @@ public class AirReservationController {
 		return "main/adminMain/airPlane/airReservationList";
 	}
 	
-	
 	//항공예약목록
 	@RequestMapping(value="airReservationCancelList")
 	public String airReservationCancelList() {

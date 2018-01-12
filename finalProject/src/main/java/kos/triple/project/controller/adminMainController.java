@@ -13,7 +13,6 @@ public class adminMainController {
 			return "main/adminMain/homeManage";
 		}
 		
-		
 		//관리자페이지
 		@RequestMapping(value="siteManage")
 		public String siteManage() {
@@ -23,8 +22,6 @@ public class adminMainController {
 		
 		
 	
-		
-		
 		
 		
 }
