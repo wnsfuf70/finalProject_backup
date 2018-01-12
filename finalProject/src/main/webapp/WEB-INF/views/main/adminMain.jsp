@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <title>Bootstrap Example</title>
+  <title>동행 관리자 페이지</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -20,7 +20,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">동행 관리자</a>
+      <a class="navbar-brand">동행 관리자</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="logout">로그아웃</a></li>
@@ -61,7 +61,7 @@
   	  <div class="homepage_manager">
   	  <h4>홈페이지 관리 메뉴</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">배너관리</a></li>
+        <li><a href="#section1">배너관리</a></li>
         <li><a href="#section2">팝업관리</a></li>
       </ul><br>
       </div>
@@ -71,7 +71,7 @@
       <div class="siteuse_manager">
       <h4>사이트 관리 메뉴</h4>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">회원관리</a></li>
+        <li><a href="#section1">회원관리</a></li>
         <li><a href="#section2">QnA 관리</a></li>
       </ul><br>
       </div>
@@ -88,8 +88,9 @@
         </span>
       </div>
       <!-- 검색바 -->
-      
     </div>
+	
+	
 	
 	<!-- 본문 -->
 	
@@ -132,8 +133,15 @@
 			</form>
 		</div>
     </div>
+      
+      <div style="position:relative;display:block;height:0;padding:0;overflow:hidden;padding-bottom:56.25%; border:1px solid red">
+    		<iframe src="" name="contentFrame" style="position:absolute;top:0;left:0;bottom:0;height:100%;width:100%;border:0;"></iframe>
+		</div>
+
+    </div> 
 	
 	<!-- 본문끝 -->
+	
 	
   </div>
 </div>    
