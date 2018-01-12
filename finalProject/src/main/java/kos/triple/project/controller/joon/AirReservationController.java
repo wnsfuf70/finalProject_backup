@@ -25,4 +25,35 @@ public class AirReservationController {
 		return "123";
 	}
 	
+	//항공예약목록
+	@RequestMapping(value="airReservationList")
+	public String airReservationList() {
+		System.out.println("airReservationList()");
+		return "main/adminMain/airPlane/airReservationList";
+	}
+	
+	
+	//항공예약목록
+	@RequestMapping(value="airReservationCancelList")
+	public String airReservationCancelList() {
+		System.out.println("airReservationCancelList()");
+		return "main/adminMain/airPlane/airReservationCancelList";
+	}		
+	
+	//항공노선추가
+	@RequestMapping(value="airRouteAdd")
+	public String airRouteAdd() {
+		System.out.println("airRouteAdd()");
+		return "main/adminMain/airPlane/airRouteAdd";
+	}		
+	
+	//항공운행정보수정
+	@RequestMapping(value="airOperationChange")
+	public String airOperationChange() {
+		System.out.println("airOperationChange()");
+		return "main/adminMain/airPlane/airOperationChange";
+	}		
+		
+	
+	
 }
