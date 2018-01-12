@@ -12,5 +12,8 @@ public interface CarService {
 	
 	//렌트카 조회
 	public void rentCar(HttpServletRequest req, Model model);
+	
+	//렌트카 삭제
+	public void rentDelete(HttpServletRequest req, Model model);
 
 }

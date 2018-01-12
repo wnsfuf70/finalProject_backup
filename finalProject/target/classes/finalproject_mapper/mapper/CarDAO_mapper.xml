@@ -9,7 +9,7 @@
 		 type속성은 패키지 경로를 포함한 클래스명이나 리턴타입의 별칭 
 		 result : 쿼리 결과의 각각의 컬럼값을 자바빈의 프로퍼티의 매핑하기 위해 하위 엘리먼트에 사용-->
 		 
-	<resultMap id="rentCar_Map" type="kos.triple.project.vo.RentCarVO">
+ 	<resultMap id="rentCar_Map" type="kos.triple.project.vo.RentCarVO">
 			 <result property="use_km" column="use_km"/>
 			 <result property="car_count" column="car_count"/>
 			 <result property="insurance" column="insurance"/>
@@ -23,12 +23,26 @@
 			<result property="car_price" column="car_price"/>
 			<result property="car_addprice" column="car_addprice"/>		
 		</collection>
-	</resultMap>
+	</resultMap>      
 	
 	<!-- 렌트카 조회 -->
 	<select id="rentCar" resultMap="rentCar_Map">
 		SELECT DISTINCT rentcar.use_km,rentcar.car_count,rentcar.insurance,rentcar.car_num,rentcar.car_img,
 		car.car_name, car.car_kind, car.fuel, car.brand_name, car.car_price,car.car_addprice
-		FROM rentcar JOIN car ON rentcar.car_num=car.car_num WHERE car_kind=#{car_kind}
+		FROM rentcar JOIN car ON rentcar.car_num=car.car_num WHERE car_kind=#{car_kind} ORDER BY car_price;
 	</select>
+	
+	<!-- 렌트카추가 -->
+	<insert id="rentAdd" parameterType="kos.triple.project.vo.RentCarVO">
+		INSERT INTO rentcar(rent_no,use_km,car_count,insurance,car_num,car_img) 
+		VALUES
+		(#{rent_no},#{use_km},#{car_count},#{insurance},#{car_num},#{car_img})
+	</insert>
+	
+	<!-- 렌트카삭제 -->
+	<delete id="rentDelete" parameterType="String">
+		DELETE FROM rentcar r WHERE EXISTS
+		(SELECT 1 FROM car c WHERE c.car_num = r.car_num AND car_num=#{car_num})
+	</delete>
+	
 </mapper>

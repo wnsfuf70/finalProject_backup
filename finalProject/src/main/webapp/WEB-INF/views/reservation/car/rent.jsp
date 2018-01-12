@@ -204,7 +204,7 @@
 		<!--End off Home Sections-->
 		
 		<div class="container">
-		 
+		 <form action="carList" method="post" name="rentForm">
 			<h2>차량 예약</h2>
 				<div class="row">
 				    <div class="col-sm-1">
@@ -235,13 +235,9 @@
 				    </div>
 				</div>
 				<div class="row">
-					<center><input type="button" id="car_search" name="search_rent" value="검색"></center>
+					<center><input type="submit" id="car_search" name="search_rent" value="검색"></center>
 				</div>
-				<div class="row">
-					<div id="result">
-						차량이름 : <%request.getParameter("car_kind");%>
-					</div>
-				</div>
+				</form>
 		 
 		</div>
 
